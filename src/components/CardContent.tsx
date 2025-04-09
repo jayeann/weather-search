@@ -111,6 +111,14 @@ const CardContent = () => {
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    if (value.length > 0) {
+      value = value.replace(/\b\w/g, (char) => char.toUpperCase());
+    }
+    setInputSearch(value);
+  };
+
   return (
     <>
       <div className="flex">
@@ -120,7 +128,7 @@ const CardContent = () => {
           className="flex-1 bg-white rounded-lg mt-1 px-3 py-2 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
           value={inputSearch}
-          onChange={(e) => setInputSearch(e.target.value)}
+          onChange={handleInputChange}
           placeholder="Search City here..."
           onKeyDown={handleKeyPress}
         />
