@@ -166,11 +166,19 @@ const CardContent = () => {
         )}
       </div>
       {previousSearchArr.length > 0 && (
-        <div>
-          Previous Searches:
+        <div className="w-96">
+          <div className="flex justify-between items-center">
+            <div className="text-sm text-neutral-400 font-medium">
+              Previous Searches
+            </div>
+            <div className="text-sm text-neutral-400 font-medium hover:text-red-500 cursor-pointer">
+              Clear
+            </div>
+          </div>
           <div className="flex flex-wrap">
             {previousSearchArr.map((item) => (
               <Button
+                className="mt-2"
                 key={item}
                 text={item}
                 handleClick={() => handleSearch(item)}
