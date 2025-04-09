@@ -4,7 +4,7 @@ A simple and interactive weather app that allows users to check the current weat
 
 ## Demo 🎬
 
-[Live Demo](#) _(Link to your live app)_
+![Watch the video](./assets/weather-demo.mov)
 
 ## Features ✨
 
@@ -15,7 +15,7 @@ A simple and interactive weather app that allows users to check the current weat
 
 ## Screenshots 📸
 
-_Example of the weather screen_
+![Screenshot of the app](./assets/weather-screenshot.png)
 
 ## Technologies Used 🛠️
 
