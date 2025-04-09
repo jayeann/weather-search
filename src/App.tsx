@@ -1,5 +1,4 @@
-import { useState } from "react";
-import SearchComponent from "./components/SearchComponent";
+import CardContent from "./components/CardContent";
 import "./App.css";
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
         Find out the latest weather conditions for your favorite cities{" "}
       </p>
       <div className="card shadow-2xl p-6 rounded-lg bg-white max-w-full">
-        <SearchComponent />
+        <CardContent />
       </div>
     </>
   );

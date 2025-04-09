@@ -66,7 +66,7 @@ const mockWeatherData: MockWeatherData = {
   },
 };
 
-const SearchComponent = () => {
+const CardContent = () => {
   const [inputSearch, setInputSearch] = useState<string>("");
   const [selectedCityData, setSelectedCityData] = useState<WeatherData[]>([]);
   const [previousSearchArr, setPreviousSearchArr] = useState<string[]>([]);
@@ -112,7 +112,7 @@ const SearchComponent = () => {
   };
 
   return (
-    <div className="shadow-2xl p-6 rounded-lg">
+    <>
       <div className="flex">
         <input
           ref={inputRef}
@@ -172,8 +172,8 @@ const SearchComponent = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
-export default SearchComponent;
+export default CardContent;
