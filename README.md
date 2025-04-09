@@ -1,3 +1,37 @@
+# Weather App 🌦️
+
+A simple and interactive weather app that allows users to check the current weather and forecasts for their favorite cities. It provides temperature, humidity, wind speed.
+
+## Demo 🎬
+
+[Live Demo](#) _(Link to your live app)_
+
+## Features ✨
+
+- **Current Weather**: Display the current temperature, humidity, wind speed.
+- **Search Cities**: Type any city to get weather updates.
+- **Responsive Layout**: Optimized for desktop and mobile devices.
+- **Previous Searches**: Show your previous searches for quick access to their weather.
+
+## Screenshots 📸
+
+_Example of the weather screen_
+
+## Technologies Used 🛠️
+
+- **React**: The core front-end framework for building the app's user interface.
+- **TailwindCSS**: For fast, responsive styling.
+
+## Setup & Installation 🚀
+
+To run this project locally:
+
+1. **Clone this repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/weather-app.git
+   ```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
