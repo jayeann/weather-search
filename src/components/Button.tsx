@@ -7,11 +7,20 @@ interface ButtonProps {
   value?: string;
   icon?: React.ReactNode;
   ref?: React.Ref<HTMLButtonElement>;
+  className?: string;
 }
-const Button = ({ key, handleClick, text, value, icon, ref }: ButtonProps) => {
+const Button = ({
+  key,
+  handleClick,
+  text,
+  value,
+  icon,
+  ref,
+  className,
+}: ButtonProps) => {
   return (
     <button
-      className="flex justify-content-center items-center hover:outline-none hover:border-sky-500 hover:ring-1 hover:ring-sky-500"
+      className={`flex justify-content-center items-center hover:outline-none hover:border-sky-500 hover:ring-1 hover:ring-sky-500 ${className}`}
       key={key}
       onClick={handleClick}
       value={value}
