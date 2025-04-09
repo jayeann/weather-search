@@ -9,6 +9,7 @@ interface ButtonProps {
   ref?: React.Ref<HTMLButtonElement>;
   className?: string;
   disabled?: boolean;
+  leftFlat?: boolean;
 }
 const Button = ({
   key,
@@ -19,6 +20,7 @@ const Button = ({
   ref,
   className,
   disabled,
+  leftFlat,
 }: ButtonProps) => {
   return (
     <button
@@ -26,7 +28,9 @@ const Button = ({
         disabled
           ? `cursor-not-allowed opacity-50 `
           : `hover:outline-none hover:border-sky-500 hover:ring-1 hover:ring-sky-500`
-      } ${className}`}
+      } 
+      ${leftFlat ? "rounded-r-lg" : "rounded-lg"}
+      ${className ? className : ""}`}
       key={key}
       onClick={handleClick}
       value={value}
