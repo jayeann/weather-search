@@ -8,6 +8,7 @@ interface ButtonProps {
   icon?: React.ReactNode;
   ref?: React.Ref<HTMLButtonElement>;
   className?: string;
+  disabled?: boolean;
 }
 const Button = ({
   key,
@@ -17,14 +18,20 @@ const Button = ({
   icon,
   ref,
   className,
+  disabled,
 }: ButtonProps) => {
   return (
     <button
-      className={`flex justify-content-center items-center hover:outline-none hover:border-sky-500 hover:ring-1 hover:ring-sky-500 ${className}`}
+      className={`basic-button flex justify-content-center items-center ${
+        disabled
+          ? `cursor-not-allowed opacity-50 `
+          : `hover:outline-none hover:border-sky-500 hover:ring-1 hover:ring-sky-500`
+      } ${className}`}
       key={key}
       onClick={handleClick}
       value={value}
       ref={ref}
+      disabled={disabled}
     >
       {icon && <span>{icon}</span>}
       {text && <span className={`${icon ? "ml-2" : ""}`}>{text}</span>}

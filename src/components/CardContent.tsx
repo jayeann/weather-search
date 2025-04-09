@@ -72,7 +72,7 @@ const CardContent = () => {
   const [previousSearchArr, setPreviousSearchArr] = useState<string[]>([]);
   const [searchInitiated, setSearchInitiated] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const buttonRef = useRef<HTMLInputElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (inputRef.current) {
@@ -119,6 +119,10 @@ const CardContent = () => {
     setInputSearch(value);
   };
 
+  const handleClear = () => {
+    setPreviousSearchArr([]);
+  };
+
   return (
     <>
       <div className="flex">
@@ -137,6 +141,7 @@ const CardContent = () => {
           text="Search"
           handleClick={() => handleSearch()}
           icon={<GrSearch />}
+          disabled={!inputSearch.trim()}
         />
         <Button handleClick={() => handleReset()} icon={<GrPowerReset />} />
       </div>
@@ -167,13 +172,16 @@ const CardContent = () => {
       </div>
       {previousSearchArr.length > 0 && (
         <div className="w-96">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center border-solid mb-2">
             <div className="text-sm text-neutral-400 font-medium">
               Previous Searches
             </div>
-            <div className="text-sm text-neutral-400 font-medium hover:text-red-500 cursor-pointer">
+            <button
+              className="transparent-button text-sm text-neutral-400 font-medium hover:text-red-500 cursor-pointer"
+              onClick={handleClear}
+            >
               Clear
-            </div>
+            </button>
           </div>
           <div className="flex flex-wrap">
             {previousSearchArr.map((item) => (
