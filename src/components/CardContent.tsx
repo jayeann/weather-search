@@ -147,7 +147,11 @@ const CardContent = () => {
           icon={<GrSearch />}
           disabled={!inputSearch.trim()}
         />
-        <Button handleClick={() => handleReset()} icon={<GrPowerReset />} />
+        <Button
+          className={"ml-2"}
+          handleClick={() => handleReset()}
+          icon={<GrPowerReset />}
+        />
       </div>
 
       {/* WEATHER CONTENT */}
@@ -197,7 +201,7 @@ const CardContent = () => {
               Clear
             </button>
           </div>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap gap-2">
             {previousSearchArr.map((item) => (
               <Button
                 className="mt-2"
