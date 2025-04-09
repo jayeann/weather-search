@@ -11,7 +11,7 @@ function App() {
       <p className="mb-8">
         Find out the latest weather conditions for your favorite cities{" "}
       </p>
-      <div className="card max-w-full">
+      <div className="card shadow-2xl p-6 rounded-lg bg-white max-w-full">
         <SearchComponent />
       </div>
     </>
