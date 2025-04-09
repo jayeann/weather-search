@@ -18,7 +18,7 @@ const Button = ({ key, handleClick, text, value, icon, ref }: ButtonProps) => {
       ref={ref}
     >
       {icon && <span>{icon}</span>}
-      {text && <span className="ml-2">{text}</span>}
+      {text && <span className={`${icon ? "ml-2" : ""}`}>{text}</span>}
     </button>
   );
 };
