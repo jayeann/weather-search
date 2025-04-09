@@ -4,10 +4,8 @@ A simple and interactive weather app that allows users to check the current weat
 
 ## Demo 🎬
 
-[<video width="600" controls>
-  <source src="/video/weather-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>](https://github.com/user-attachments/assets/a1797763-0f75-4050-b7b1-5895c077f385)
+![Demo of the app](./src/assets/weather-demo.gif)
+(https://github.com/user-attachments/assets/a1797763-0f75-4050-b7b1-5895c077f385)
 
 ## Features ✨
 
