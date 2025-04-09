@@ -24,13 +24,15 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={`basic-button flex justify-content-center items-center ${
-        disabled
-          ? `cursor-not-allowed opacity-50 `
-          : `hover:outline-none hover:border-sky-500 hover:ring-1 hover:ring-sky-500`
-      } 
-      ${leftFlat ? "rounded-r-lg" : "rounded-lg"}
-      ${className ? className : ""}`}
+      className={`basic-button flex justify-content-center items-center 
+        ${
+          disabled
+            ? `cursor-not-allowed opacity-50 `
+            : `hover:outline-none hover:border-sky-500 hover:ring-1 hover:ring-sky-500`
+        } 
+        ${leftFlat ? "rounded-r-lg" : "rounded-lg"}
+        ${className ? className : ""}
+      `}
       key={key}
       onClick={handleClick}
       value={value}

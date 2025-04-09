@@ -46,7 +46,6 @@ h1 {
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin: 0 1rem 0 0;
 }
 
 .transparent-button{
