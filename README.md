@@ -29,8 +29,38 @@ To run this project locally:
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/jayeann/weather-search.git
    ```
+
+2. **Navigate to the project folder:**
+
+   ```bash
+   cd weather-search
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the app locally:**
+
+   ```bash
+   npm start
+   ```
+
+   This will start the app in development mode and open it in your browser at http://localhost:5173.
+
+## Usage 💡
+
+1. Enter the name of a city into the search bar.
+
+2. Press the "Search" button or hit Enter.
+
+3. The app will fetch and display the current weather for the city.
+
+4. You can reset and turn back to the initial state just by clicking the reset button.
 
 # React + TypeScript + Vite
 
