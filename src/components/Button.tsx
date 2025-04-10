@@ -2,7 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   handleClick: () => void; // Type for handleClick function
-  key?: string;
+  id?: string;
   text?: string;
   value?: string;
   icon?: React.ReactNode;
@@ -12,7 +12,7 @@ interface ButtonProps {
   leftFlat?: boolean;
 }
 const Button = ({
-  key,
+  id,
   handleClick,
   text,
   value,
@@ -33,7 +33,7 @@ const Button = ({
         ${leftFlat ? "rounded-r-lg" : "rounded-lg"}
         ${className ? className : ""}
       `}
-      key={key}
+      key={id}
       onClick={handleClick}
       value={value}
       ref={ref}
