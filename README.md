@@ -9,7 +9,7 @@ A simple and interactive weather app that allows users to check the current weat
 
 ## Features ✨
 
-- **Current Weather**: Display the current temperature, humidity, wind speed.
+- **Weather**: Display the temperature, humidity, wind speed of a city.
 - **Search Cities**: Type any city to get weather updates.
 - **Responsive Layout**: Optimized for desktop and mobile devices.
 - **Previous Searches**: Show your previous searches for quick access to their weather.
