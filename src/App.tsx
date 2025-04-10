@@ -1,18 +1,19 @@
 import CardContent from "./components/CardContent";
 import "./App.css";
+import Greeting from "./components/Greeting";
+import Description from "./components/Description";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
     <>
-      <h1 className="font-bold text-xl ">
-        &#x1F324; Welcome to Weather Explorer! &#x1F30D;
-      </h1>
-      <p className="mb-8">
-        Find out the latest weather conditions for your favorite cities{" "}
-      </p>
-      <div className="card shadow-2xl p-6 rounded-lg bg-white max-w-full">
+      <QueryClientProvider client={queryClient}>
+        <Greeting text="Weather Explorer" />
+        <Description text="Find out the latest weather conditions for your favorite cities" />
         <CardContent />
-      </div>
+      </QueryClientProvider>
     </>
   );
 }
