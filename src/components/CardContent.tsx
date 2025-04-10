@@ -4,71 +4,12 @@ import WeatherItemInfo from "./WeatherItemInfo";
 import { GrPowerReset, GrSearch } from "react-icons/gr";
 import { FaTemperatureHigh, FaWind } from "react-icons/fa";
 import { TbDroplets } from "react-icons/tb";
-interface WeatherData {
-  temperature: {
-    current: number;
-    min: number;
-    max: number;
-    unit: string;
-  };
-  humidity: number;
-  wind: {
-    speed: number;
-    direction: string;
-    unit: string;
-  };
-}
-
-interface MockWeatherData {
-  [key: string]: WeatherData;
-}
-
-const mockWeatherData: MockWeatherData = {
-  "New York": {
-    temperature: {
-      current: 18,
-      min: 15,
-      max: 21,
-      unit: "°C",
-    },
-    humidity: 65,
-    wind: {
-      speed: 8,
-      direction: "N",
-      unit: "km/h",
-    },
-  },
-  London: {
-    temperature: {
-      current: 25,
-      min: 10,
-      max: 25,
-      unit: "°C",
-    },
-    humidity: 39,
-    wind: {
-      speed: 12,
-      direction: "N",
-      unit: "km/h",
-    },
-  },
-  "Los Angeles": {
-    temperature: {
-      current: 13,
-      min: 8,
-      max: 15,
-      unit: "°C",
-    },
-    humidity: 30,
-    wind: {
-      speed: 10,
-      direction: "N",
-      unit: "km/h",
-    },
-  },
-};
+import { WeatherData } from "../types/weather";
+import { useCityWeathersQuery } from "../hooks/useWeather";
 
 const CardContent = () => {
+  const { data, isLoading, error } = useCityWeathersQuery();
+
   const [inputSearch, setInputSearch] = useState<string>("");
   const [selectedCityData, setSelectedCityData] = useState<WeatherData[]>([]);
   const [previousSearchArr, setPreviousSearchArr] = useState<string[]>([]);
@@ -81,13 +22,13 @@ const CardContent = () => {
       inputRef.current.focus();
     }
   }, []);
+
   const handleSearch = (item?: string) => {
-    const searchText = item || inputSearch;
-    if (searchText) {
-      console.log(item);
-      const data = mockWeatherData[searchText];
-      if (data) {
-        setSelectedCityData([data]);
+    const searchText: string = item || inputSearch;
+    if (data && searchText) {
+      const selectedCity = data[searchText];
+      if (selectedCity) {
+        setSelectedCityData([selectedCity]);
       } else {
         setSelectedCityData([]);
       }
@@ -125,8 +66,12 @@ const CardContent = () => {
     setPreviousSearchArr([]);
   };
 
+  if (isLoading) return "Loading...";
+
+  if (error) return "An error has occurred: " + error.message;
+
   return (
-    <>
+    <div className="card shadow-2xl p-6 rounded-lg bg-white max-w-full">
       {/* SEARCH and RESET */}
       <div className="flex">
         <input
@@ -214,7 +159,7 @@ const CardContent = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
