@@ -1,4 +1,3 @@
-// src/api/users.ts
 import { MockWeatherData } from "../types/weather";
 
 export const fetchCityWeathers = async (): Promise<MockWeatherData[]> => {
