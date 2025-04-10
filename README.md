@@ -18,6 +18,18 @@ A simple and interactive weather app that allows users to check the current weat
 
 ![Screenshot of the app](./src/assets/weather-screenshot.png)
 
+## Usage 💡
+
+1. Enter the name of a city into the search bar.
+
+2. Press the "Search" button or hit Enter.
+
+3. The app will fetch and display the current weather for the city.
+
+4. You can clear your previous searches.
+
+5. And you can reset and turn back to the initial state just by clicking the reset button.
+
 ## Technologies Used 🛠️
 
 - **React**: The core front-end framework for building the app's user interface.
@@ -54,17 +66,5 @@ To run this project locally:
    ```
 
    This will start the app in development mode and open it in your browser at http://localhost:5173.
-
-## Usage 💡
-
-1. Enter the name of a city into the search bar.
-
-2. Press the "Search" button or hit Enter.
-
-3. The app will fetch and display the current weather for the city.
-
-4. You can clear your previous searches.
-
-5. And you can reset and turn back to the initial state just by clicking the reset button.
 
 
